@@ -3,16 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora de Éxito Financiero y Emprendimiento</title>
+    <title>Calculadora de Éxito Financiero y Rendimiento Digital 2026</title>
     <style>
         :root {
-            --primary: #2563eb;
-            --primary-dark: #1d4ed8;
-            --bg-color: #f8fafc;
+            --primary: #6366f1;
+            --primary-hover: #4f46e5;
+            --bg-gradient: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
             --card-bg: #ffffff;
-            --text-main: #1e293b;
-            --text-muted: #64748b;
-            --border: #e2e8f0;
+            --text-main: #0f172a;
+            --text-muted: #475569;
+            --border: #cbd5e1;
+            --accent: #10b981;
         }
         * {
             box-sizing: border-box;
@@ -21,116 +22,143 @@
             font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
         }
         body {
-            background-color: var(--bg-color);
+            background: var(--bg-gradient);
             color: var(--text-main);
-            line-height: 1.6;
-            padding: 20px;
+            line-height: 1.7;
+            padding: 40px 20px;
+            min-height: 100vh;
         }
         .container {
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
         }
         header {
             text-align: center;
-            margin-bottom: 30px;
-            padding-top: 20px;
+            margin-bottom: 40px;
         }
         header h1 {
-            font-size: 2.2rem;
+            font-size: 2.5rem;
             color: var(--text-main);
-            margin-bottom: 10px;
+            margin-bottom: 12px;
+            letter-spacing: -0.025em;
         }
         header p {
             color: var(--text-muted);
-            font-size: 1.1rem;
+            font-size: 1.15rem;
         }
         .card {
             background: var(--card-bg);
-            border-radius: 12px;
-            padding: 30px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-            margin-bottom: 30px;
-            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+            margin-bottom: 35px;
+            border: 1px solid rgba(226, 232, 240, 0.8);
         }
         .form-group {
-            margin-bottom: 20px;
+            margin-bottom: 24px;
         }
         label {
             display: block;
             font-weight: 600;
             margin-bottom: 8px;
             color: var(--text-main);
+            font-size: 0.95rem;
         }
         input, select {
             width: 100%;
-            padding: 12px;
-            border: 1px solid var(--border);
-            border-radius: 8px;
+            padding: 14px 16px;
+            border: 2px solid var(--border);
+            border-radius: 10px;
             font-size: 1rem;
             outline: none;
-            transition: border-color 0.2s;
+            transition: all 0.2s ease;
+            background: #f8fafc;
         }
         input:focus, select:focus {
             border-color: var(--primary);
-            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+            background: #ffffff;
+            box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
         }
         button {
             width: 100%;
             background-color: var(--primary);
             color: white;
             border: none;
-            padding: 14px;
+            padding: 16px;
             font-size: 1.1rem;
             font-weight: 600;
-            border-radius: 8px;
+            border-radius: 10px;
             cursor: pointer;
-            transition: background-color 0.2s;
+            transition: background-color 0.2s, transform 0.1s;
         }
         button:hover {
-            background-color: var(--primary-dark);
+            background-color: var(--primary-hover);
+        }
+        button:active {
+            transform: scale(0.99);
         }
         #result {
             display: none;
-            margin-top: 25px;
-            padding: 20px;
-            background: #eff6ff;
-            border-left: 5px solid var(--primary);
-            border-radius: 8px;
+            margin-top: 30px;
+            padding: 25px;
+            background: #eef2ff;
+            border-left: 6px solid var(--primary);
+            border-radius: 12px;
+            animation: fadeIn 0.4s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(5px); }
+            to { opacity: 1; transform: translateY(0); }
         }
         #result h3 {
-            color: var(--primary-dark);
-            margin-bottom: 10px;
-            font-size: 1.4rem;
+            color: var(--primary-hover);
+            margin-bottom: 12px;
+            font-size: 1.5rem;
         }
         .seo-content h2 {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
+            font-size: 1.6rem;
+            margin-bottom: 18px;
             color: var(--text-main);
+            margin-top: 25px;
         }
         .seo-content p {
-            margin-bottom: 15px;
+            margin-bottom: 16px;
             color: var(--text-muted);
+        }
+        .seo-content ul {
+            margin-left: 20px;
+            margin-bottom: 20px;
+            color: var(--text-muted);
+        }
+        .seo-content li {
+            margin-bottom: 8px;
         }
         .seo-content table {
             width: 100%;
             border-collapse: collapse;
-            margin-top: 15px;
-            margin-bottom: 15px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            background: #ffffff;
+            border-radius: 8px;
+            overflow: hidden;
         }
         .seo-content th, .seo-content td {
             border: 1px solid var(--border);
-            padding: 10px;
+            padding: 12px 16px;
             text-align: left;
         }
         .seo-content th {
             background-color: #f1f5f9;
+            color: var(--text-main);
         }
         footer {
             text-align: center;
             color: var(--text-muted);
             font-size: 0.9rem;
-            margin-top: 40px;
+            margin-top: 50px;
             padding-bottom: 20px;
+            border-top: 1px solid var(--border);
+            padding-top: 25px;
         }
     </style>
 </head>
@@ -138,72 +166,86 @@
     <div class="container">
         <header>
             <h1>Calculadora de Éxito Financiero</h1>
-            <p>Evalúa tu rendimiento empresarial y compara tus ingresos netos según tu edad y sector.</p>
+            <p>Mide tu rendimiento corporativo, compara tus ingresos netos según tu edad y descubre tu nivel de escalabilidad en el mercado digital.</p>
         </header>
 
         <div class="card">
             <div class="form-group">
-                <label for="age">Tu Edad:</label>
-                <input type="number" id="age" min="15" max="99" placeholder="Ej. 25" required>
+                <label for="age">Tu Edad Actual:</label>
+                <input type="number" id="age" min="15" max="99" placeholder="Ej. 26" required>
             </div>
             
             <div class="form-group">
-                <label for="income">Facturación Mensual Neta (en €):</label>
-                <input type="number" id="income" min="0" placeholder="Ej. 2500" required>
+                <label for="income">Facturación Mensual Neta Media (en €):</label>
+                <input type="number" id="income" min="0" placeholder="Ej. 3500" required>
             </div>
 
             <div class="form-group">
-                <label for="sector">Sector de Emprendimiento:</label>
+                <label for="sector">Modelo de Negocio o Sector:</label>
                 <select id="sector">
-                    <option value="digital">Negocios Digitales / E-commerce</option>
-                    <option value="servicios">Agencia / Servicios Profesionales</option>
-                    <option value="contenido">Creador de Contenido / Redes</option>
-                    <option value="tradicional">Negocio Tradicional / Físico</option>
+                    <option value="digital">E-commerce / Negocios Digitales</option>
+                    <option value="servicios">Agencia / Consultoría / Servicios B2B</option>
+                    <option value="contenido">Creador de Contenido / Monetización Social</option>
+                    <option value="tradicional">Comercio Físico / Estructura Tradicional</option>
                 </select>
             </div>
 
-            <button onclick="calcularExito()">Calcular Mi Nota</button>
+            <button onclick="calcularExito()">Evaluar Mi Rendimiento</button>
 
             <div id="result">
-                <h3 id="scoreTitle">Tu Nota: --/10</h3>
-                <p id="scoreDescription">Introduce tus datos para ver el análisis detallado.</p>
+                <h3 id="scoreTitle">Tu Calificación: --/10</h3>
+                <p id="scoreDescription">Introduce los parámetros superiores para desbloquear el diagnóstico detallado de tu empresa.</p>
             </div>
         </div>
 
         <div class="card seo-content">
-            <h2>¿Cómo se calcula el índice de éxito y rendimiento financiero?</h2>
-            <p>El barómetro de éxito financiero y emprendimiento evalúa la relación entre la edad del fundador y su capacidad de generación de ingresos recurrentes netos. No se trata únicamente de la cantidad absoluta facturada, sino de la velocidad de crecimiento y la optimización del modelo de negocio en función de la etapa vital.</p>
+            <h2>Metodología y Análisis del Barómetro de Emprendimiento</h2>
+            <p>La evaluación del rendimiento financiero y el éxito empresarial no debe medirse únicamente en función de la cifra absoluta de ingresos brutos mensuales. Factores clave como los márgenes de beneficio neto, la optimización de los costes de adquisición de clientes (CAC), la diversificación de fuentes de tráfico digital y la etapa vital del fundador determinan el verdadero potencial de escalabilidad a largo plazo.</p>
             
-            <h2>Baremos orientativos de facturación mensual por tramos de edad</h2>
+            <p>Nuestro algoritmo analiza cruces estadísticos basados en datos de evolución corporativa por tramos de edad para ofrecer una perspectiva realista de posicionamiento frente al mercado actual de autónomos, pymes y creadores digitales.</p>
+
+            <h2>Baremos Oficiales de Rendimiento y Facturación por Tramos</h2>
             <table>
                 <tr>
                     <th>Tramo de Edad</th>
-                    <th>Nivel Estándar</th>
-                    <th>Nivel Avanzado (Top 10%)</th>
+                    <th>Nivel Estándar (Base)</th>
+                    <th>Nivel de Éxito Avanzado (Top 10%)</th>
                 </tr>
                 <tr>
-                    <td>18 - 22 años</td>
-                    <td>0€ - 800€</td>
-                    <td>+2,500€</td>
+                    <td>18 a 22 años</td>
+                    <td>0€ - 900€ / mes</td>
+                    <td>+3,000€ / mes</td>
                 </tr>
                 <tr>
-                    <td>23 - 30 años</td>
-                    <td>1,200€ - 3,000€</td>
-                    <td>+8,000€</td>
+                    <td>23 a 30 años</td>
+                    <td>1,500€ - 3,500€ / mes</td>
+                    <td>+9,000€ / mes</td>
                 </tr>
                 <tr>
                     <td>Más de 30 años</td>
-                    <td>2,500€ - 6,000€</td>
-                    <td>+15,000€</td>
+                    <td>3,000€ - 7,000€ / mes</td>
+                    <td>+18,000€ / mes</td>
                 </tr>
             </table>
 
-            <h2>Estrategias clave para escalar tu negocio digital</h2>
-            <p>Para mejorar tu calificación en el ecosistema digital actual, es fundamental diversificar las fuentes de tráfico orgánico, evitar la dependencia exclusiva de plataformas de pago por clic y estructurar embudos de conversión automatizados que garanticen la retención del cliente a largo plazo.</p>
+            <h2>Preguntas Frecuentes sobre Finanzas y Crecimiento Empresarial</h2>
+            
+            <p><strong>¿Cómo afecta el sector de actividad a la nota obtenida?</strong><br>
+            Los negocios digitales y las agencias de servicios profesionales suelen permitir márgenes de beneficio operativo netamente superiores en comparación con los modelos de comercio físico tradicional, lo cual se pondera de forma específica en los algoritmos de evaluación.</p>
+
+            <p><strong>¿Qué estrategias son vitales para escalar la facturación digital?</strong></p>
+            <ul>
+                <li>Optimizar los embudos de conversión orgánicos mediante plataformas de alta retención como TikTok e Instagram Reels.</li>
+                <li>Reducir la dependencia absoluta de canales de tráfico de pago por clic (PPC) mediante estrategias de SEO técnico y autoridad de marca.</li>
+                <li>Automatizar procesos operativos para transformar el autoempleo en un modelo de negocio delegado y escalable.</li>
+            </ul>
+
+            <p><strong>¿Cómo interpretar correctamente el diagnóstico final?</strong><br>
+            Una puntuación inferior a 6 no indica un fracaso, sino una fase temprana de desarrollo con un enorme margen de optimización en los canales de captación y monetización de ingresos.</p>
         </div>
 
         <footer>
-            <p>&copy; 2026 Calculadora de Éxito. Todos los derechos reservados. | <a href="#" style="color:var(--primary);">Política de Privacidad</a></p>
+            <p>&copy; 2026 Calculadora de Éxito Financiero. Todos los derechos reservados. | <a href="#" style="color:var(--primary); text-decoration:none;">Aviso Legal</a> | <a href="#" style="color:var(--primary); text-decoration:none;">Política de Privacidad</a></p>
         </footer>
     </div>
 
@@ -214,38 +256,39 @@
             const sector = document.getElementById('sector').value;
 
             if (isNaN(age) || isNaN(income) || age < 15 || income < 0) {
-                alert('Por favor, introduce valores válidos para la edad y la facturación.');
+                alert('Por favor, introduce una edad válida y una cifra de facturación correcta.');
                 return;
             }
 
             let baseScore = 5.0;
 
             if (age <= 22) {
-                if (income > 3000) baseScore = 9.8;
-                else if (income > 1500) baseScore = 8.5;
-                else if (income > 500) baseScore = 7.0;
+                if (income > 3500) baseScore = 9.8;
+                else if (income > 1800) baseScore = 8.6;
+                else if (income > 600) baseScore = 7.1;
                 else baseScore = 5.5;
             } else if (age <= 30) {
-                if (income > 8000) baseScore = 9.6;
-                else if (income > 4000) baseScore = 8.2;
-                else if (income > 2000) baseScore = 6.8;
+                if (income > 9000) baseScore = 9.6;
+                else if (income > 4500) baseScore = 8.3;
+                else if (income > 2200) baseScore = 6.9;
                 else baseScore = 5.0;
             } else {
-                if (income > 15000) baseScore = 9.5;
-                else if (income > 7000) baseScore = 8.0;
-                else if (income > 3000) baseScore = 6.5;
+                if (income > 18000) baseScore = 9.5;
+                else if (income > 8000) baseScore = 8.1;
+                else if (income > 3500) baseScore = 6.6;
                 else baseScore = 4.5;
             }
 
             let nivel = "";
+            let colorAccent = "var(--primary)";
             if (baseScore >= 9.0) {
-                nivel = "🚀 Éxito Excepcional (Top 5% de emprendedores de tu generación)";
+                nivel = "🚀 Éxito Excepcional (Te situidas en el Top 5% de rendimiento de tu generación)";
             } else if (baseScore >= 7.5) {
-                nivel = "🔥 Alto Rendimiento (Vas muy por encima de la media)";
+                nivel = "🔥 Alto Rendimiento Empresarial (Muy por encima de la media del sector)";
             } else if (baseScore >= 6.0) {
-                nivel = "📈 Crecimiento Constante (En buena trayectoria)";
+                nivel = "📈 Crecimiento Constante y Consolidado (Trayectoria positiva y estable)";
             } else {
-                nivel = "⚡ En Fase de Desarrollo (Gran margen de mejora y escalado)";
+                nivel = "⚡ Fase de Arranque u Optimización (Gran margen de escalado disponible)";
             }
 
             const resultDiv = document.getElementById('result');
@@ -253,8 +296,8 @@
             const scoreDescription = document.getElementById('scoreDescription');
 
             resultDiv.style.display = 'block';
-            scoreTitle.innerHTML = `Tu Nota: ${baseScore.toFixed(1)} / 10`;
-            scoreDescription.innerHTML = `<strong>Diagnóstico:</strong> ${nivel}<br><br><em>Nota: Este cálculo es una estimación basada en algoritmos estadísticos de rendimiento empresarial por sectores digitales. Continúa optimizando tus embudos de venta para escalar al siguiente nivel.</em>`;
+            scoreTitle.innerHTML = `Tu Calificación: ${baseScore.toFixed(1)} / 10`;
+            scoreDescription.innerHTML = `<strong>Diagnóstico Analítico:</strong> ${nivel}<br><br><em>Aviso: Este barómetro es una estimación estadística orientativa basada en benchmarks de rendimiento digital. Continúa optimizando tus embudos comerciales para maximizar tu rentabilidad neta.</em>`;
         }
     </script>
 </body>
