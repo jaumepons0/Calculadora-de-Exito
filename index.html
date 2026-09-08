@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora de Éxito Financiero & Barómetro Digital</title>
+    <title>Calculadora de Éxito Financiero & Guía de Emprendimiento Digital</title>
     <style>
         :root {
             --bg-dark: #090d16;
@@ -31,7 +31,7 @@
                               radial-gradient(circle at 90% 80%, rgba(236, 72, 153, 0.15) 0%, transparent 40%);
         }
         .container {
-            max-width: 850px;
+            max-width: 900px;
             margin: 0 auto;
         }
         header {
@@ -39,13 +39,12 @@
             margin-bottom: 35px;
         }
         header h1 {
-            font-size: 2.6rem;
+            font-size: 2.5rem;
             font-weight: 800;
             background: linear-gradient(135deg, #f472b6, #a78bfa, #38bdf8);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             margin-bottom: 12px;
-            letter-spacing: -0.03em;
         }
         header p {
             color: var(--text-muted);
@@ -75,7 +74,6 @@
             font-weight: 600;
             margin-bottom: 8px;
             color: var(--text-main);
-            font-size: 0.95rem;
         }
         input, select {
             width: 100%;
@@ -117,37 +115,31 @@
             background: rgba(15, 23, 42, 0.8);
             border: 1px solid var(--secondary-glow);
             border-radius: 14px;
-            box-shadow: inset 0 0 15px rgba(139, 92, 242, 0.2);
-            animation: popIn 0.4s ease;
-        }
-        @keyframes popIn {
-            0% { transform: scale(0.95); opacity: 0; }
-            100% { transform: scale(1); opacity: 1; }
         }
         #result h3 {
             color: #f472b6;
             margin-bottom: 10px;
             font-size: 1.6rem;
         }
-        .seo-content h2 {
-            font-size: 1.5rem;
+        .content-section h3 {
+            font-size: 1.4rem;
             color: #38bdf8;
             margin-bottom: 15px;
             margin-top: 25px;
         }
-        .seo-content p {
+        .content-section p {
             margin-bottom: 15px;
             color: var(--text-muted);
         }
-        .seo-content ul {
+        .content-section ul {
             margin-left: 20px;
             margin-bottom: 20px;
             color: var(--text-muted);
         }
-        .seo-content li {
+        .content-section li {
             margin-bottom: 8px;
         }
-        .seo-content table {
+        .content-section table {
             width: 100%;
             border-collapse: collapse;
             margin: 20px 0;
@@ -155,20 +147,20 @@
             border-radius: 10px;
             overflow: hidden;
         }
-        .seo-content th, .seo-content td {
+        .content-section th, .content-section td {
             border: 1px solid #374151;
             padding: 12px 15px;
             text-align: left;
             color: var(--text-main);
         }
-        .seo-content th {
+        .content-section th {
             background-color: #374151;
             color: #38bdf8;
         }
         footer {
             text-align: center;
             color: var(--text-muted);
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             margin-top: 40px;
             padding-top: 25px;
             border-top: 1px solid var(--border);
@@ -176,6 +168,7 @@
         footer a {
             color: #38bdf8;
             text-decoration: none;
+            margin: 0 10px;
         }
     </style>
 </head>
@@ -183,31 +176,31 @@
     <div class="container">
         <header>
             <h1>Calculadora de Éxito Financiero</h1>
-            <p>Descubre tu potencial de escalabilidad y compara tus ingresos netos en segundos.</p>
+            <p>Barómetro digital de rendimiento empresarial, escalabilidad e ingresos netos.</p>
         </header>
 
         <div class="card">
             <div class="form-group">
                 <label for="age">Tu Edad Actual:</label>
-                <input type="number" id="age" min="15" max="99" placeholder="Ej. 24" required>
+                <input type="number" id="age" min="15" max="99" placeholder="Ej. 25" required>
             </div>
             
             <div class="form-group">
                 <label for="income">Facturación Mensual Neta (en €):</label>
-                <input type="number" id="income" min="0" placeholder="Ej. 4000" required>
+                <input type="number" id="income" min="0" placeholder="Ej. 3500" required>
             </div>
 
             <div class="form-group">
-                <label for="sector">Modelo de Negocio / Industria:</label>
+                <label for="sector">Modelo de Negocio:</label>
                 <select id="sector">
                     <option value="digital">Negocios Digitales / E-commerce</option>
                     <option value="servicios">Agencia / Consultoría / Servicios B2B</option>
                     <option value="contenido">Creador de Contenido / Redes Sociales</option>
-                    <option value="tradicional">Comercio Físico / Negocio Tradicional</option>
+                    <option value="tradicional">Comercio Físico / Estructura Tradicional</option>
                 </select>
             </div>
 
-            <button onclick="calcularExito()">⚡ Evaluar Mi Nota Ahora</button>
+            <button onclick="calcularExito()">⚡ Evaluar Mi Rendimiento</button>
 
             <div id="result">
                 <h3 id="scoreTitle">Tu Nota: --/10</h3>
@@ -215,11 +208,11 @@
             </div>
         </div>
 
-        <div class="card seo-content">
-            <h2>¿Cómo se evalúa el rendimiento financiero y el éxito digital?</h2>
-            <p>El índice de éxito empresarial analiza la correlación directa entre la etapa vital del fundador y su capacidad para generar flujos de caja recurrentes. No se valora únicamente la facturación bruta, sino la eficiencia operativa, los márgenes netos y la velocidad de escalado en mercados altamente competitivos.</p>
+        <div class="card content-section">
+            <h2 style="color: #fff; font-size: 1.8rem; margin-bottom: 10px;">Guía Completa de Crecimiento y Escalabilidad Empresarial</h2>
+            <p>El análisis del éxito financiero en la era digital requiere comprender que la facturación bruta no lo es todo. Los márgenes operativos, la automatización de procesos y la diversificación de fuentes de ingresos marcan la diferencia entre un autoempleo frágil y una estructura corporativa sólida y escalable a largo plazo.</p>
             
-            <h2>Baremos de Referencia y Facturación por Rangos de Edad</h2>
+            <h3>Baremos de Referencia por Rangos de Edad</h3>
             <table>
                 <tr>
                     <th>Rango de Edad</th>
@@ -243,21 +236,31 @@
                 </tr>
             </table>
 
-            <h2>Preguntas Frecuentes sobre Escalabilidad y Monetización</h2>
-            
-            <p><strong>¿Por qué el sector digital obtiene puntuaciones diferentes?</strong><br>
-            Los modelos basados en internet y las agencias digitales suelen soportar costes fijos mínimos, lo que permite un apalancamiento financiero muy superior al del comercio minorista tradicional.</p>
-
-            <p><strong>Claves fundamentales para potenciar los ingresos online:</strong></p>
+            <h3>Estrategias Clave para Escalar Negocios en Internet</h3>
+            <p>Para maximizar el rendimiento económico y superar las barreras de crecimiento tradicional, los emprendedores actuales implementan palancas específicas:</p>
             <ul>
-                <li>Captación de tráfico orgánico altamente cualificado a través de plataformas de vídeo corto.</li>
-                <li>Reducción de la dependencia exclusiva de anuncios de pago mediante embudos automatizados.</li>
-                <li>Diversificación de fuentes de monetización (afiliación, publicidad programática y servicios de alto valor).</li>
+                <li><strong>Tráfico orgánico cualificado:</strong> Aprovechar plataformas de vídeo de corta duración para captar atención masiva sin depender de presupuestos publicitarios elevados.</li>
+                <li><strong>Embudos de conversión optimizados:</strong> Diseñar páginas de aterrizaje enfocadas en la retención de usuarios y la conversión directa de valor.</li>
+                <li><strong>Optimización de costes fijos:</strong> Minimizar la infraestructura física para reinvertir los márgenes en tecnología y adquisición de talento.</li>
             </ul>
+
+            <h3>Preguntas Frecuentes sobre el Barómetro Financiero</h3>
+            <p><strong>¿Cómo interpreta el algoritmo los datos introducidos?</strong><br>
+            El sistema cruza la edad del fundador con los ingresos netos declarados y el sector industrial, aplicando tablas de rendimiento estadístico comparativo para estimar la posición relativa frente al ecosistema digital actual.</p>
+            
+            <p><strong>¿Qué ocurre si mi puntuación es baja?</strong><br>
+            Una calificación en fase inicial simplemente refleja una oportunidad masiva de optimización en los canales de captación y en los modelos de monetización aplicados.</p>
+
+            <h3 style="margin-top: 40px; border-top: 1px solid var(--border); padding-top: 20px;">Política de Privacidad y Aviso Legal</h3>
+            <p>En cumplimiento con las normativas de protección de datos, se informa a los usuarios que esta plataforma web (Calculadora de Éxito Financiero) no almacena, recopila ni cede ningún tipo de dato personal, financiero o información introducida en los formularios interactivos, los cuales se procesan de forma local en el navegador del usuario.</p>
+            <p>Este sitio web participa en programas de monetización publicitaria mediante redes de anuncios de terceros, los cuales pueden utilizar cookies técnicas para la correcta medición de impresiones y visualizaciones de contenido.</p>
         </div>
 
         <footer>
-            <p>&copy; 2026 Calculadora de Éxito Financiero. Todos los derechos reservados. | <a href="#">Política de Privacidad</a></p>
+            <p>&copy; 2026 Calculadora de Éxito Financiero. Todos los derechos reservados.</p>
+            <div style="margin-top: 10px;">
+                <a href="#">Aviso Legal</a> | <a href="#">Política de Privacidad</a> | <a href="#">Política de Cookies</a>
+            </div>
         </footer>
     </div>
 
@@ -293,13 +296,13 @@
 
             let nivel = "";
             if (baseScore >= 9.0) {
-                nivel = "🚀 Éxito Excepcional (Te sitúas en el Top 5% de tu generación)";
+                nivel = "🚀 Éxito Excepcional (Te sitúas en el Top 5% de rendimiento de tu generación)";
             } else if (baseScore >= 7.5) {
                 nivel = "🔥 Alto Rendimiento (Muy por encima de la media del mercado)";
             } else if (baseScore >= 6.0) {
                 nivel = "📈 Crecimiento Constante (Trayectoria sólida y ascendente)";
             } else {
-                nivel = "⚡ Fase de Desarrollo (Amplio margen de mejora y optimización)";
+                nivel = "⚡ Fase de Desarrollo (Amplio margen de mejora y optimización estratégica)";
             }
 
             const resultDiv = document.getElementById('result');
@@ -308,7 +311,7 @@
 
             resultDiv.style.display = 'block';
             scoreTitle.innerHTML = `Tu Calificación: ${baseScore.toFixed(1)} / 10`;
-            scoreDescription.innerHTML = `<strong>Diagnóstico:</strong> ${nivel}<br><br><em>Nota analítica: Este valor es una estimación estadística orientativa basada en promedios de rendimiento digital.</em>`;
+            scoreDescription.innerHTML = `<strong>Diagnóstico Analítico:</strong> ${nivel}<br><br><em>Nota: Este valor es una estimación estadística orientativa basada en benchmarks de rendimiento digital.</em>`;
         }
     </script>
 </body>
